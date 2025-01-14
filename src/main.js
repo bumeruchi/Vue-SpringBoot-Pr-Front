@@ -2,14 +2,16 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import "./assets/common.css";
-import axios from "axios";
+import axios from "./utils/axios";
 import store from "./vuex/store";
 // Vuetify 관련 임포트
 import 'vuetify/styles';
 import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components';
 import * as directives from 'vuetify/directives';
-
+// 디버깅: store가 제대로 가져와졌는지 확인
+console.log('Store:', store);
+console.log('Store State:', store.state);
 
 // Vuetify 인스턴스 생성
 const vuetify = createVuetify({
