@@ -1,16 +1,16 @@
 <template>
     <div class="board-list">
         <div>
-            <select v-model="search_key">
+            <select class="first w3-button w3-border"  v-model="search_key">
                 <option value="">- 선택 -</option>
                 <option value="author">작성자</option>
                 <option value="title">제목</option>
                 <option value="contents">내용</option>
             </select>
             &nbsp;
-            <input type="text" v-model="search_value" @keyup.enter="fnPage()">
+            <input type="text" class="first w3-button w3-border" v-model="search_value" @keyup.enter="fnPage()">
             &nbsp;
-            <button @click="fnPage()">검색</button>
+            <button class="w3-button w3-round w3-blue-gray" @click="fnPage()">검색</button>
         </div>
         <div class="common-buttons">
             <button type="button" class="w3-button w3-round w3-blue-gray" v-on:click="fnWrite">등록</button>
